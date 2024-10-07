@@ -2,7 +2,7 @@
 # 1. Key Rule of Thumb:
 #    Ensure the ratio of short-term to long-term EMAs is in range of 0.25 - 0.50
 #    (e.g., a 10-day vs. 50-day EMA).
-
+ 
 # 2. Upper Limit for Long-term EMAs:
 #    200 days is often used as the maximum.
 
