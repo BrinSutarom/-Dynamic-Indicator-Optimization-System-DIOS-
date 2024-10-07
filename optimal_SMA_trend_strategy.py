@@ -1,7 +1,7 @@
 # Key principles to identify trends by comparing short-term and long-term simple moving averages (SMA):
 # 1. Key Rule of Thumb:
 #    Ensure the ratio of short-term to long-term SMAs is in range of 0.25 - 0.50
-#    (e.g., a 10-day vs. 50-day SMA).
+#    (e.g., a 10-day vs. 50-day SMA). 
 
 # 2. Upper Limit for Long-term SMAs:
 #    200 days is often used as the maximum.
