@@ -82,9 +82,9 @@ if results:
 test = yf.download(asset, start=start_date, end=end_date)
 
 
-# Calculate the Best Pair ExponentialMoving Averages
-test['Best Pair Short EMA'] = test['Close'].rolling(best_pair[0]).mean()
-test['Best Pair Long EMA'] = test['Close'].rolling(best_pair[1]).mean()
+# Calculate the Best Pair Exponential Moving Averages
+test['Best Pair Short EMA'] = test['Close'].ewm(span=best_pair[0], adjust=False).mean()
+test['Best Pair Long EMA'] = test['Close'].ewm(span=best_pair[1], adjust=False).mean()
 
 # Generate signals for the Best Pair Strategy
 test['Best Pair Shares'] = (test['Best Pair Short EMA'] > test['Best Pair Long EMA']).astype(int)
@@ -94,8 +94,8 @@ test['Best Pair Wealth'] = test['Best Pair Profit'].cumsum()
 
 
 # Calculate the 50-200 Exponential Moving Averages
-test['EMA50'] = test['Close'].rolling(50).mean()
-test['EMA200'] = test['Close'].rolling(200).mean()
+test['EMA50'] = test['Close'].ewm(span=50, adjust=False).mean()
+test['EMA200'] = test['Close'].ewm(span=200, adjust=False).mean()
 
 # Generate signals for the 50-200 EMA Strategy
 test['EMA50-200 Shares'] = (test['EMA50'] > test['EMA200']).astype(int)
